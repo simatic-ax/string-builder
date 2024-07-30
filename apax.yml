@@ -3,7 +3,7 @@ name: "string-builder"
 version: 0.0.0-placeholder
 author: Siemens AG
 # Description will be displayed in the apax extension
-description: <add your description here, which will be shown in the apax extension>
+description: Library to provide a string builder with a fluent interface for SIMATIC S7-1500.
 type: lib
 #URL to the repository
 repository:
