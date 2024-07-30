@@ -2,7 +2,7 @@
 
 ## Description
 
-*please insert a description of the library*
+The package @simatic-ax/string-builder provides a StringBuilder class that implements a fluent interface. This allows users to chain string operations.
 
 ## Getting started
 
@@ -14,24 +14,57 @@ Install with Apax:
 ```cli
 apax add @simatic-ax/string-builder
 ```
-
+The package is an extension of the System.Strings namespace.
 Add the namespace in your ST code:
 
 ```iec-st
-Using Simatic.Ax.string-builder;
+USING System.Strings;
 ```
 
-| Classes | Description         |
-|---------|---------------------|
-| *xyz*     | *description for xyz* |
+## Objects
 
-| Functions   | Description             |
-|-------------|-------------------------|
-| *xyz*       | *description for*xyz** |
+### Interfaces
 
-| Function Blocks | Description           |
-|-----------------|-----------------------|
-| *xyz*           | *description for xyz* |
+[IStringBuilder](./docs/IStringBuilder.md)<br/>
+[IConstrainedStringBuilder](./docs/IConstrainedStringBuilder.md)<br/>
+
+
+### Classes
+
+[StringBuilder](./docs/StringBuilder.md)
+
+## Example
+
+### Configuration
+
+```st
+CONFIGURATION MyConfiguration
+    TASK Main(Interval := T#100ms, Priority := 1);
+    PROGRAM P1 WITH Main: MyProgram;
+
+    VAR_GLOBAL
+        diagnosticMessage  : STRING;
+    END_VAR
+END_CONFIGURATION
+```
+
+### Program
+
+```st
+USING System.Strings
+PROGRAM MyProgram
+    VAR_EXTERNAL
+        diagnosticMessage : STRING;
+    END_VAR
+
+    VAR
+        _sb : StringBuilder;
+    END_VAR
+
+    diagnosticMessage := _sb.Append('build a string').Append(' by chaining methods').Insert('How to ',0).ToString();
+    
+END_PROGRAM
+```
 
 ## Contribution
 
