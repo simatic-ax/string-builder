@@ -10,4 +10,3 @@ The StringBuilder class implements both the `IConstrainedStringBuilder` and the 
 | `Append`   | [`IStringBuilder`](IStringBuilder.md)          | Append the text to the current string and return it|
 | `Insert`   | [`IStringBuilder`](IStringBuilder.md)            | Insert the text at a specific location in the string and return it|
 | `ToString` | `STRING`                    | Return the current string|
-
