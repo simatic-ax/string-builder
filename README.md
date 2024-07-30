@@ -14,6 +14,7 @@ Install with Apax:
 ```cli
 apax add @simatic-ax/string-builder
 ```
+
 The package is an extension of the System.Strings namespace.
 Add the namespace in your ST code:
 
@@ -27,7 +28,6 @@ USING System.Strings;
 
 [IStringBuilder](./docs/IStringBuilder.md)<br/>
 [IConstrainedStringBuilder](./docs/IConstrainedStringBuilder.md)<br/>
-
 
 ### Classes
 
