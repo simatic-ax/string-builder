@@ -2,8 +2,8 @@
 
 ## Description
 
-The package @simatic-ax/string-builder provides a StringBuilder class that implements a fluent interface. This allows users to chain string operations.
-The readability of string operation is improved by a fluent interface.
+The package @simatic-ax/string-builder provides a StringBuilder class that implements a fluent interface. This allows users to chain string operations.<br><br>
+The construction of composite strings follows a pattern which is closer to natural speech compared with the conventional string operations (e.g. `CONCAT`). The readability of string operations is improved by using the package.
 
 ## Getting started
 
