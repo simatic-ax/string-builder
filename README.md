@@ -3,6 +3,7 @@
 ## Description
 
 The package @simatic-ax/string-builder provides a StringBuilder class that implements a fluent interface. This allows users to chain string operations.
+The readability of string operation is improved by a fluent interface.
 
 ## Getting started
 
