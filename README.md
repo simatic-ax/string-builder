@@ -33,6 +33,15 @@ USING System.Strings;
 
 [StringBuilder](./docs/StringBuilder.md)
 
+### Methods
+
+| Name       | Description                      |
+| ----       | :--------------------------------------- |
+| `Reset`    | Reset the current string to an empty string|
+| `Append`   | Append the text to the current string and return it|
+| `Insert`   | Insert the text at a specific location in the string and return it|
+| `ToString` | Return the current string|
+
 ## Example
 
 ### Configuration
