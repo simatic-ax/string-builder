@@ -94,6 +94,61 @@ NAMESPACE System.Strings.Test
 
             Axunit.Assert.Equal(_builder.ToString(), 'I want to search for something in this statement.');
         END_METHOD
+
+        {Test}
+        METHOD PUBLIC RemovePartFromString
+            // Arrange
+            _builder.Reset();
+            // Act
+            _builder.Append('This is really important!');
+            _builder.Remove(_builder.ToString(), 8, 7);
+            // Assert
+            Axunit.Assert.Equal(_builder.ToString(),'This is important!');
+        END_METHOD
+
+        {Test}
+        METHOD PUBLIC ExtractSubstring
+            // Arrange
+            _builder.Reset();
+            // Act
+            _builder.Append('This is a long message for testing!');
+            _builder.Substring(_builder.ToString(), 9, 14).Append(' extracted.');
+            // Assert
+            Axunit.Assert.Equal(_builder.ToString(),'a long message extracted.');
+        END_METHOD
+
+        {Test}
+        METHOD PUBLIC ExtractStartOfString
+            // Arrange
+            _builder.Reset();
+            // Act
+            _builder.Append('This is a long message for testing!');
+            _builder.StartOf(_builder.ToString(), 8).Append('using the StartOf method.');
+            // Assert
+            Axunit.Assert.Equal(_builder.ToString(),'This is using the StartOf method.');
+        END_METHOD
+
+        {Test}
+        METHOD PUBLIC ExtractEndOfString
+            // Arrange
+            _builder.Reset();
+            // Act
+            _builder.Append('This is a long message for testing!');
+            _builder.EndOf(_builder.ToString(), 1).Append(': This is an exclamation mark.');
+            // Assert
+            Axunit.Assert.Equal(_builder.ToString(),'!: This is an exclamation mark.');
+        END_METHOD
+
+        {Test}
+        METHOD PUBLIC ReplacePartOfAString
+            // Arrange
+            _builder.Reset();
+            // Act
+            _builder.Append('This is really important!');
+            _builder.Replace(_builder.ToString(),9, 6, 'very').Append('!');
+            // Assert
+            Axunit.Assert.Equal(_builder.ToString(),'This is very important!!');
+        END_METHOD
     END_CLASS
 
 END_NAMESPACE
