@@ -1,4 +1,4 @@
-NAMESPACE System.Strings
+NAMESPACE Simatic.Ax.Strings
     INTERFACE IStringBuilder EXTENDS IConstrainedStringBuilder
         METHOD Insert : IStringBuilder
             VAR_INPUT

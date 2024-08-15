@@ -16,11 +16,10 @@ Install with Apax:
 apax add @simatic-ax/string-builder
 ```
 
-The package is an extension of the System.Strings namespace.
 Add the namespace in your ST code:
 
 ```iec-st
-USING System.Strings;
+USING Simatic.Ax.Strings;
 ```
 
 ## Objects
@@ -52,7 +51,7 @@ END_CONFIGURATION
 ### Program
 
 ```st
-USING System.Strings
+USING Simatic.Ax.Strings
 PROGRAM MyProgram
     VAR_EXTERNAL
         diagnosticMessage : STRING;

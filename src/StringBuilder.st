@@ -1,5 +1,5 @@
 USING System.Strings;
-NAMESPACE System.Strings
+NAMESPACE Simatic.Ax.Strings
     CLASS StringBuilder IMPLEMENTS IStringBuilder, IConstrainedStringBuilder
         VAR
             _string : STRING;
