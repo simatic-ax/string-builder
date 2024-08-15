@@ -25,6 +25,10 @@ USING System.Strings;
 
 ## Objects
 
+UML Diagram
+
+![UML](docs\StringBuilder.png)
+
 ### Interfaces
 
 [IStringBuilder](./docs/IStringBuilder.md)<br/>
@@ -33,6 +37,20 @@ USING System.Strings;
 ### Classes
 
 [StringBuilder](./docs/StringBuilder.md)
+
+### Methods
+
+| Name       | Description                      |
+| ----       | :--------------------------------------- |
+| `Reset`    | Reset the current string to an empty string|
+| `Append`   | Append the text to the current string and return it|
+| `Insert`   | Insert the text at a specific location in the string and return it|
+| `Remove`   | Remove characters from the string and return it|
+| `Substring`| Retrieve a specific part of the string and return it|
+| `StartOf`  | Retrieve the start of a string and return it|
+| `EndOf`    | Retrieve the end of a string and return it|
+| `Replace`  | Replace characters in a string and return it|
+| `ToString` |  Return the current string|
 
 ## Example
 
