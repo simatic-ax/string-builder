@@ -27,7 +27,7 @@ USING System.Strings;
 
 UML Diagram
 
-![UML](docs\StringBuilder.png)
+![UML](./docs/StringBuilder.png)
 
 ### Interfaces
 
