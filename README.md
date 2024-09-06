@@ -33,18 +33,29 @@ USING Simatic.Ax.Strings;
 
 [StringBuilder](./docs/StringBuilder.md)
 
+### Methods
+
+| Name       | Description                      |
+| ----       | :--------------------------------------- |
+| `Reset`    | Reset the current string to an empty string|
+| `Append`   | Append the text to the current string and return it|
+| `Insert`   | Insert the text at a specific location in the string and return it|
+| `ToString` | Return the current string|
+
 ## Example
 
 ### Configuration
 
 ```st
 CONFIGURATION MyConfiguration
+
     TASK Main(Interval := T#100ms, Priority := 1);
     PROGRAM P1 WITH Main: MyProgram;
 
     VAR_GLOBAL
         diagnosticMessage  : STRING;
     END_VAR
+
 END_CONFIGURATION
 ```
 
@@ -53,6 +64,7 @@ END_CONFIGURATION
 ```st
 USING Simatic.Ax.Strings
 PROGRAM MyProgram
+
     VAR_EXTERNAL
         diagnosticMessage : STRING;
     END_VAR
@@ -61,7 +73,8 @@ PROGRAM MyProgram
         _sb : StringBuilder;
     END_VAR
 
-    diagnosticMessage := _sb.Append('build a string').Append(' by chaining methods').Insert('How to ',0).ToString();
+    diagnosticMessage := _sb.Append('build a string').Append(' by chaining methods.').Insert('How to ',0).ToString();
+    // result : "How to build a string by chaining methods."
     
 END_PROGRAM
 ```
