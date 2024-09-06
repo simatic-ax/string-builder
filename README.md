@@ -16,11 +16,10 @@ Install with Apax:
 apax add @simatic-ax/string-builder
 ```
 
-The package is an extension of the System.Strings namespace.
 Add the namespace in your ST code:
 
 ```iec-st
-USING System.Strings;
+USING Simatic.Ax.Strings;
 ```
 
 ## Objects
@@ -58,20 +57,23 @@ UML Diagram
 
 ```st
 CONFIGURATION MyConfiguration
+
     TASK Main(Interval := T#100ms, Priority := 1);
     PROGRAM P1 WITH Main: MyProgram;
 
     VAR_GLOBAL
         diagnosticMessage  : STRING;
     END_VAR
+
 END_CONFIGURATION
 ```
 
 ### Program
 
 ```st
-USING System.Strings
+USING Simatic.Ax.Strings
 PROGRAM MyProgram
+
     VAR_EXTERNAL
         diagnosticMessage : STRING;
     END_VAR
@@ -80,7 +82,8 @@ PROGRAM MyProgram
         _sb : StringBuilder;
     END_VAR
 
-    diagnosticMessage := _sb.Append('build a string').Append(' by chaining methods').Insert('How to ',0).ToString();
+    diagnosticMessage := _sb.Append('build a string').Append(' by chaining methods.').Insert('How to ',0).ToString();
+    // result : "How to build a string by chaining methods."
     
 END_PROGRAM
 ```

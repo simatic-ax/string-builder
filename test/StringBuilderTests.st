@@ -1,6 +1,6 @@
 USING AxUnit.Assert;
 USING System.Strings;
-NAMESPACE System.Strings.Test
+NAMESPACE Simatic.Ax.Strings.Test
 
     {TestFixture}
     CLASS TestStringBuilder
