@@ -2,7 +2,8 @@
 
 ## Description
 
-The package @simatic-ax/string-builder provides a StringBuilder class that implements a fluent interface. This allows users to chain string operations.
+The package @simatic-ax/string-builder provides a StringBuilder class that implements a fluent interface. This allows users to chain string operations.<br><br>
+The construction of composite strings follows a pattern which is closer to natural speech compared with the conventional string operations (e.g. `CONCAT`). The readability of string operations is improved by using the package.
 
 ## Getting started
 
@@ -14,20 +15,23 @@ Install with Apax:
 ```cli
 apax add @simatic-ax/string-builder
 ```
-The package is an extension of the System.Strings namespace.
+
 Add the namespace in your ST code:
 
 ```iec-st
-USING System.Strings;
+USING Simatic.Ax.Strings;
 ```
 
 ## Objects
+
+UML Diagram
+
+![UML](./docs/StringBuilder.png)
 
 ### Interfaces
 
 [IStringBuilder](./docs/IStringBuilder.md)<br/>
 [IConstrainedStringBuilder](./docs/IConstrainedStringBuilder.md)<br/>
-
 
 ### Classes
 
@@ -40,7 +44,12 @@ USING System.Strings;
 | `Reset`    | Reset the current string to an empty string|
 | `Append`   | Append the text to the current string and return it|
 | `Insert`   | Insert the text at a specific location in the string and return it|
-| `ToString` | Return the current string|
+| `Remove`   | Remove characters from the string and return it|
+| `Substring`| Retrieve a specific part of the string and return it|
+| `StartOf`  | Retrieve the start of a string and return it|
+| `EndOf`    | Retrieve the end of a string and return it|
+| `Replace`  | Replace characters in a string and return it|
+| `ToString` |  Return the current string|
 
 ## Example
 
@@ -62,8 +71,7 @@ END_CONFIGURATION
 ### Program
 
 ```st
-USING System.Strings;
-
+USING Simatic.Ax.Strings
 PROGRAM MyProgram
 
     VAR_EXTERNAL
