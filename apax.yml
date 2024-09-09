@@ -1,5 +1,5 @@
 # General information
-name: "string-builder"
+name: "@simatic-ax/string-builder"
 version: 0.0.0-placeholder
 author: Siemens AG
 # Description will be displayed in the apax extension
