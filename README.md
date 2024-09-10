@@ -26,7 +26,24 @@ USING Simatic.Ax.Strings;
 
 UML Diagram
 
-![UML](./docs/StringBuilder.png)
+```mermaid
+classDiagram
+    class StringBuilder
+        StringBuilder : -_string STRING
+    interface IConstrainedStringBuilder
+        IConstrainedStringBuilder : +Reset IConstrainedStringBuilder
+        IConstrainedStringBuilder : +Append IStringBuilder
+        IConstrainedStringBuilder : +ToString() STRING 
+    interface IStringBuilder
+        IStringBuilder : +Insert() IStringBuilder
+        IStringBuilder : +Remove() IStringBuilder
+        IStringBuilder : +Substring() IStringBuilder
+        IStringBuilder : +StartOf() IStringBuilder
+        IStringBuilder : +EndOf() IStringBuilder
+        IStringBuilder : +Replace() IStringBuilder
+    IConstrainedStringBuilder <|-- IStringBuilder
+    StringBuilder ..|> IStringBuilder
+```
 
 ### Interfaces
 
