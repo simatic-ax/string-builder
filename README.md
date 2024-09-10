@@ -26,7 +26,7 @@ USING Simatic.Ax.Strings;
 
 UML Diagram
 
-```mermaid 
+```mermaid
 classDiagram
     class StringBuilder
         StringBuilder : -_string STRING
@@ -44,6 +44,7 @@ classDiagram
     IConstrainedStringBuilder <|-- IStringBuilder
     StringBuilder ..|> IStringBuilder
 ```
+
 ### Interfaces
 
 [IStringBuilder](./docs/IStringBuilder.md)<br/>
