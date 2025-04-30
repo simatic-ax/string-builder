@@ -22,7 +22,7 @@ installStrategy: strict
 
 # Dependencies
 devDependencies:
-  '@ax/sdk': ^2411.0.0
+  '@ax/sdk': ^2411.2.0
   "@simatic-ax/snippetscollection": ^1.0.0
 
 # Project variables
@@ -38,4 +38,4 @@ files:
   - 'src'
   - 'snippets'
 dependencies:
-  "@ax/system-strings": ^8.0.7
+  "@ax/system-strings": ^8.0.8
