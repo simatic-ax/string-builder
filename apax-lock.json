@@ -7,11 +7,11 @@
     "name": "@simatic-ax/string-builder",
     "version": "0.0.0-placeholder",
     "dependencies": {
-      "@ax/system-strings": "^10.0.24"
+      "@ax/system-strings": "^10.2.7"
     },
     "devDependencies": {
       "@ax/sdk": "^2510.0.0",
-      "@simatic-ax/snippetscollection": "^1.0.0"
+      "@simatic-ax/snippetscollection": "^1.1.0"
     },
     "catalogs": {
       "@ax/simatic-ax": "^2510.0.0"
